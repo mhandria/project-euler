@@ -22,3 +22,8 @@ java.io.EOFException: Unexpected end of ZLIB input stream
 	at org.eclipse.epp.internal.logging.aeri.ui.utils.Zips.unzip(Zips.java:83)
 	at org.eclipse.epp.internal.logging.aeri.ui.log.ProblemsDatabaseUpdateJob.run(ProblemsDatabaseUpdateJob.java:71)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 2 2 2016-07-11 14:44:47.314
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2016-07-11 14:44:47.315
+!MESSAGE The project description file (.project) for 'Project_Euler_1' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
