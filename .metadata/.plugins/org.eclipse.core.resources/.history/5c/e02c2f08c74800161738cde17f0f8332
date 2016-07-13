@@ -1,0 +1,41 @@
+/*	name: 			Michael Handria
+ * 
+ *	date: 			July 12, 2016
+ *
+ *	description: 	This program will solve the first problem from 
+ *					Project Euler's website: https://projecteuler.net/problem=2.
+ *					This program uses the most optimal way I could find to solve it.
+ * 
+ */
+
+public class fibsum {
+	
+	public static void main(String[] args){
+		boolean notMil = true;
+		int i = 3;
+		double fib = 0;
+		do{
+			i+=3;
+			fib = fib + findFib(i);
+			if(findFib(i+3)>=4000000)
+				notMil = false;
+			
+			
+		}while(notMil);
+		System.out.println(fib);
+	}
+	
+	public static double findFib(int n){
+		double phi = (1 + Math.sqrt(5))/2;
+		double nphi = (1 - Math.sqrt(5))/2;
+		double fib = Math.pow(phi, 3) - Math.pow(nphi, 3);
+		return (fib/Math.sqrt(5));
+	}
+	
+	public static int findFibDigit(double n){
+		return (int)Math.log(n)+1;
+	}
+	
+
+
+}

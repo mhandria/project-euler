@@ -1,0 +1,22 @@
+/*	name: 			Michael Handria
+ * 
+ *	date: 			July 12, 2016
+ *
+ *	description: 	This program will solve the first problem from 
+ *					Project Euler's website: https://projecteuler.net/problem=2.
+ *					This program uses the most optimal way I could find to solve it.
+ * 
+ */
+
+import java.math.*;
+
+public class fibsum {
+	
+	public static void main(String[] args){
+		BigDecimal Phi = BigDecimal.ONE.add(new BigDecimal(Math.sqrt(5))).divide(new BigDecimal(2));
+		int x = Phi.intValueExact();
+		System.out.println(x);
+		
+	}
+
+}

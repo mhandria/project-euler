@@ -1,0 +1,56 @@
+/*	name: 			Michael Handria
+ * 
+ *	date: 			July 12, 2016
+ *
+ *	description: 	This program will solve the first problem from 
+ *					Project Euler's website: https://projecteuler.net/problem=2.
+ *					This program uses the most optimal way I could find to solve it.
+ * 
+ */
+
+public class fibsum {
+	
+	
+	public static void main(String[] args){
+		
+		//check if hit the 4,000,000 mark
+		boolean notMil = true;
+		
+		//iterator
+		int i = 0;
+		
+		//find the sum of the fib sequence of even numbers
+		long fibSum = 0;
+		
+		//loop to calculate the sum
+		do{
+			
+			//increment the iterator by 3 to get only the even fib values
+			i+=3;
+			
+			//summation 
+			fibSum = fibSum + (long)findFib(i);
+			
+			//check if the digit 
+			if(findFibDigit(findFib(i+3))>=1000000)
+				notMil = false;
+			
+			
+		}while(notMil);
+		System.out.println(fibSum);
+	}
+	
+	public static double findFib(int n){
+		double phi = (1 + Math.sqrt(5))/2;
+		double nphi = (1 - Math.sqrt(5))/2;
+		double fib = Math.pow(phi, n) - Math.pow(nphi, n);
+		return (fib/Math.sqrt(5));
+	}
+	
+	public static int findFibDigit(double n){
+		return (int)Math.log(n)+1;
+	}
+	
+
+
+}
